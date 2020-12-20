@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/songView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -25,7 +25,7 @@
             android:textSize="40sp" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/singerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -43,11 +43,11 @@
         android:layout_marginStart="75dp"
         android:text="キー："
         android:textSize="30sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
+        app:layout_constraintBaseline_toBaselineOf="@+id/keyView"
         app:layout_constraintStart_toStartOf="@+id/editText" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/keyView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

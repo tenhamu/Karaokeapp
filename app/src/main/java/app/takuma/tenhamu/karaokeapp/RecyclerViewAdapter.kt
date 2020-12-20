@@ -28,8 +28,14 @@ class RecyclerViewAdapter(private val context: Context,
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val memo: Memo = songList?.get(position) ?: return
 
-        holder.container.setOnClickListener{
+        holder.container.setOnClickListener(){
+
             listener.onItemClick(memo)
+
+        }
+        holder.container.setOnLongClickListener {
+            listener.onItemLongClick(memo)
+            true
         }
 
         holder.singerName.text = memo.singer
@@ -47,5 +53,6 @@ class RecyclerViewAdapter(private val context: Context,
 
     interface OnItemClickListener{
         fun onItemClick(item: Memo)
+        fun onItemLongClick(item: Memo)
     }
 }
