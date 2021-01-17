@@ -27,10 +27,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
        // swipeToDismissTouchHelper.attachToRecyclerView(recyclerView)
-
         val songList = readAll()
 
-        val adapter = RecyclerViewAdapter(this, songList, object : RecyclerViewAdapter.OnItemClickListener {
+
+
+        val adapter = RecyclerViewAdapter(this, songList , object : RecyclerViewAdapter.OnItemClickListener {
             override  fun onItemClick(item: Memo) {
                 val SongPage = Intent(this@MainActivity,songpage::class.java)
                 SongPage.putExtra("SONG",item.id)
