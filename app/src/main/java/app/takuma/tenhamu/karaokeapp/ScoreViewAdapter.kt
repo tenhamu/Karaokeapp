@@ -10,6 +10,7 @@ import io.realm.OrderedRealmCollection
 import io.realm.RealmRecyclerViewAdapter
 import kotlinx.android.synthetic.main.item_score_data_cell.view.*
 import java.text.FieldPosition
+import java.text.SimpleDateFormat
 
 class ScoreViewAdapter (
     private val context2: Context,
@@ -27,8 +28,10 @@ class ScoreViewAdapter (
 
     override fun onBindViewHolder(holder: ScoreViewHolder, position: Int) {
         val kiroku: Kiroku = scoreList?.get(position) ?: return
+        val format = SimpleDateFormat("yyyy/MM/dd")
+        val date = kiroku.createdAt
 
-        holder.datenumber.text = kiroku.createdAt.toString()
+        holder.datenumber.text = format.format(date)
         holder.scorenumber.text = kiroku.score.toString()
         holder.kyokumei.text = kiroku.songname
 
@@ -36,7 +39,7 @@ class ScoreViewAdapter (
      class ScoreViewHolder(view: View): RecyclerView.ViewHolder(view) {
          val datenumber: TextView = view.findViewById(R.id.datetext)
          val scorenumber: TextView = view.findViewById(R.id.scoretext)
-         val kyokumei: TextView = view.findViewById(R.id.songText)
+         val kyokumei: TextView = view.findViewById(R.id.songtext)
 
      }
 
