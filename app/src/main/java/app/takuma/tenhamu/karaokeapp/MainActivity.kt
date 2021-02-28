@@ -22,9 +22,12 @@ class MainActivity : AppCompatActivity() {
        // getSwipeToDismissTouchHelper(RecyclerViewAdapter)
     }
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setTitle("カラオケレパートリー")
 
        // swipeToDismissTouchHelper.attachToRecyclerView(recyclerView)
         val songList = readAll()

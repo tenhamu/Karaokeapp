@@ -17,6 +17,7 @@ class touroku : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_touroku)
+        setTitle("レパートリー登録")
         saveButton.setOnClickListener {
 
             if (songText.length() != 0 && singerText.length() != 0){

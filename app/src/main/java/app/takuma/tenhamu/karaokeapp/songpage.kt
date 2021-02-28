@@ -22,6 +22,7 @@ class songpage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_songpage)
+        setTitle("これまでの記録")
 
         val id: String = intent.getStringExtra("SONG")
         Log.d("Intent",id)
